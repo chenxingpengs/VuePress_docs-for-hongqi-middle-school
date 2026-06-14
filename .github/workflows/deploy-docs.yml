@@ -35,14 +35,12 @@ jobs:
         env:
           NODE_OPTIONS: --max_old_space_size=4096
         run: |-
-          # 匹配package.json "build": "vuepress build docs"
-          pnpm run build
-          # 在正确打包目录生成.nojekyll，防止GitHub Pages忽略下划线文件夹
+          # 使用你项目真实脚本 docs:build
+          pnpm run docs:build
           touch docs/.vuepress/dist/.nojekyll
 
       - name: 部署文档
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          # Linux 正斜杠，正确打包输出目录
           folder: docs/.vuepress/dist
