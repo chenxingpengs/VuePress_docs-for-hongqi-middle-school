@@ -3,11 +3,11 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 
 export default defineUserConfig({
-  base: "/",
+  base: "/VuePress_docs-for-hongqi-middle-school/",
 
   lang: "zh-CN",
-  title: "文档演示",
-  description: "vuepress-theme-hope 的文档演示",
+  title: "智慧校园系统",
+  description: "珠海市红旗中学智慧校园系统文档",
 
   theme,
 
